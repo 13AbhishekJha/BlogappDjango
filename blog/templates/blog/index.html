@@ -6,16 +6,12 @@ My Blog
 {% endblock %} 
 
 {% block css_files %}
+  <link rel="stylesheet" href="{% static "blog/post.css" %}" />
   <link rel="stylesheet" href="{% static "blog/index.css" %}" />
 {% endblock %}
 
 {% block content %}
-<header id="main-navigation">
-  <h1><a href="">Abhi's Blog</a></h1>
-  <nav>
-    <a href="">All Posts</a>
-  </nav>
-</header>
+
 
 <section id="welcome">
   <header>
@@ -29,17 +25,7 @@ My Blog
   <h2>My Latest BLOGS</h2>
 
   <ul>
-    <li>
-      <article class="post">
-        <a href="">
-          <img src="" alt="AI" />
-          <div class="post__content">
-            <h3>Artifical intelligence</h3>
-            <p>“Artificial intelligence,” Alexa says, “is the ability of a computer program or a machine to think or learn.” What Alexa fails to mention is that she herself is a form of artificial intelligence.</p>
-          </div>
-        </a>
-      </article>
-    </li>
+    {% include "blog/includes/post.html" %}
   </ul>
 </section>
 

@@ -1,0 +1,15 @@
+{% load static %}
+
+<li>
+  <article class="post">
+    <a href="{% url "post-detail-page" "the-mountains" %}">
+      <img src="{% static "blog/images/profile.jpg" %}" alt="Mountain Hiking"
+      />
+      <div class="post__content">
+        <h3>Artifical intelligence</h3>
+        <p>“Artificial intelligence,” Alexa says, “is the ability of a computer program or a machine to think or learn.
+            ” What Alexa fails to mention is that she herself is a form of artificial intelligence.</p>
+      </div>
+    </a>
+  </article>
+</li>
